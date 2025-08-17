@@ -1,3 +1,4 @@
+“This repo contains a regime-switching signal for statistical arbitrage. It includes reproducible notebooks, source code, and configuration for development.”
 # Regime Switch for Statistical Arbitrage
 **Stage:** Problem Framing & Scoping (Stage 01)
 
