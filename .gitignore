@@ -1,11 +1,12 @@
+# Ignore Jupyter checkpoints
 .ipynb_checkpoints/
-.env
-*.env
+
+# Ignore local class materials
+class_materials/
+
+# Ignore Python cache files
 __pycache__/
 *.pyc
 
-.ipynb_checkpoints/
+# Ignore environment files
 .env
-*.env
-__pycache__/
-*.pyc
