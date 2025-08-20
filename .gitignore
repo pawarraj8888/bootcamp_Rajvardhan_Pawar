@@ -10,3 +10,8 @@ __pycache__/
 
 # Ignore environment files
 .env
+
+# Keep raw ingested data
+
+# Keep raw ingested data
+!data/raw/
