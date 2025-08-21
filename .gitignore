@@ -15,3 +15,7 @@ __pycache__/
 
 # Keep raw ingested data
 !data/raw/
+.DS_Store
+project/data/
+project/artifacts/
+*.ipynb_checkpoints/
