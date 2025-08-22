@@ -29,3 +29,15 @@ Our mean-reversion/pairs strategy tends to bleed on correlation breaks and volat
 ## Lifecycle Mapping
 Goal → Stage → Deliverable
 - Reduce drawdowns on bad regimes → Stage 01 → README + stakeholder memo
+
+## Goals → Lifecycle → Deliverables Mapping
+
+| Goal                                               | Lifecycle Stage              | Deliverable                          |
+|----------------------------------------------------|------------------------------|--------------------------------------|
+| Detect when stat-arb strategy is likely to underperform | Data analysis → Modeling      | Regime-switch signal (daily flag)    |
+| Protect capital during adverse regimes             | Modeling → Evaluation        | Backtested results showing reduced drawdowns |
+| Provide actionable decision support for PM/traders | Deployment → Monitoring      | Trade/Stand-Down recommendation report |
+| Maintain stable risk-adjusted returns (Sharpe)     | Evaluation → Iteration       | Performance metrics & monitoring notebook |
+
+- Build baseline model & backtest → Stage 02/03 → Notebook + report
+- Integrate with engine → Later stage → CLI/script + monitoring
