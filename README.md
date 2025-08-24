@@ -1,48 +1,56 @@
+# Bootcamp: Rajvardhan Pawar
 
-
-## Repo Plan
-`/data/`, `/src/`, `/notebooks/`, `/docs/`; weekly updates; PRs for major changes.
-
-## Stage 06: Data Preprocessing (Cleaning Strategy)
-
-### Approach
-This stage standardizes the raw dataset before analysis. We modularized the cleaning into three reusable functions (`src/cleaning.py`) and applied them in `notebooks/stage06_preprocessing.ipynb`.
-
-1. **`fill_missing_median(df)`**  
-   - Numeric NaNs are filled with the **median** of that column.  
-   - Rationale: Median is robust to skew and outliers compared to mean.
-
-2. **`drop_missing(df, threshold=0.8)`**  
-   - Drops columns if **more than 80% of values are missing**.  
-   - Rationale: Columns dominated by NaNs add noise if imputed.
-
-3. **`normalize_data(df)`**  
-   - Applies Min–Max scaling to numeric columns (→ [0,1]).  
-   - If no numeric columns exist, scaling is skipped gracefully.  
-   - Rationale: Normalization ensures comparability across features.
+This repository documents my work for the Data Bootcamp, organized into **six structured stages** and separated into `homework` and `project` components. Each stage builds on the previous one, covering the end-to-end data pipeline: from collection and preprocessing to analysis and reporting.
 
 ---
 
-### Assumptions
-- **Categorical/text fields**: left unchanged at this stage (no encoding, no imputation).  
-- **Row drops**: not applied unless explicitly required (to avoid reducing sample size).  
-- **Numeric parsing**: assumed correct; if a numeric column is read as string (due to $, %, commas), it should be fixed upstream.  
-- **No outlier clipping**: outliers are kept for now since removal is highly task-specific.  
-- **Guardrails**: If no numeric columns exist (like the current S&P 500 constituents dataset), `fill_missing_median` and `normalize_data` will no-op by design.
+## 📂 Repo Structure
+
+
+bootcamp_Rajvardhan_Pawar/
+│
+├── homework/ # Bootcamp assignments (Stage00–06)
+│ ├── stage00/ # Environment setup
+│ ├── stage01/ # Data exploration & setup
+│ ├── stage02/ # Configs & .env usage
+│ ├── stage03/ # API pulls & data collection
+│ ├── stage04/ # Web scraping
+│ ├── stage05/ # Data storage (CSV/Parquet)
+│ └── stage06/ # Data preprocessing (cleaning)
+│
+├── project/ # Personal project (parallel to homework stages)
+│
+├── src/ # Modular Python functions (e.g. cleaning, utils)
+│
+├── .env.example # Template for environment variables
+├── .gitignore # Ignored files/folders
+└── README.md # This file
+
 
 ---
 
-### Outputs
-- **Processed file** saved to: `data/processed/cleaned_<filename>.csv`  
-- **Notebook comparison** shows:  
-  - Shape before vs after  
-  - Missing values per column before vs after  
-  - Summary stats of numeric columns (if present)
+## 🛠 Stages Overview
+
+- **Stage 00 – Setup**  
+  Repo setup, environment initialization, `.gitignore` and `.env` templates.  
+
+- **Stage 01 – Data Exploration**  
+  Basic NumPy/Pandas operations, dataset inspection, summary statistics.  
+
+- **Stage 02 – Config Management**  
+  Use of `.env` files and `config.py` for environment variables.  
+
+- **Stage 03 – API Pulls**  
+  Collecting data from APIs (e.g., financial/time series) and saving raw files.  
+
+- **Stage 04 – Web Scraping**  
+  Extracting structured tables with BeautifulSoup, validation of outputs.  
+
+- **Stage 05 – Data Storage**  
+  Writing processed data in multiple formats (`CSV`, `Parquet`), documenting folder usage.  
+
+- **Stage 06 – Data Preprocessing (Cleaning)**  
+  Standardizing raw datasets. Cleaning pipeline modularized into `src/cleaning.py` and applied in `notebooks/stage06_preprocessing.ipynb`.  
 
 ---
-
-### Trade-offs
-- **Imputation vs dropping**: Filling preserves data volume; dropping reduces noise.  
-- **Median choice**: Median avoids distortion from outliers, but loses mean-based interpretability.  
-- **Min–Max scaling**: Works best when bounded values are desirable; alternative is z-score if Gaussian assumption matters.
 
