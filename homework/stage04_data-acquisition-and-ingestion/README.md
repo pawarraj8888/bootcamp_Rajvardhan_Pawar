@@ -1,4 +1,4 @@
-# Stage 5 — Data Ingestion
+# Stage 4 — Data Acquisition and Ingestion
 
 ## Overview
 In this stage, we pulled financial data from an API and scraped a public table.  
