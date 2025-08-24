@@ -4,8 +4,6 @@ This repository documents my work for the Data Bootcamp, organized into **six st
 
 ---
 
-## 📂 Repo Structure
-
 
 ## 📂 Repo Structure
 
