@@ -5,6 +5,9 @@ This repository documents my work for the Data Bootcamp, organized into **six st
 ---
 
 ## 📂 Repo Structure
+
+
+
 bootcamp_Rajvardhan_Pawar/
 │
 ├── homework/ # Bootcamp assignments (Stage00–06)
@@ -23,6 +26,9 @@ bootcamp_Rajvardhan_Pawar/
 ├── .env.example # Template for environment variables
 ├── .gitignore # Ignored files/folders
 └── README.md # This file
+
+
+
 ---
 
 ## 🛠 Stages Overview
