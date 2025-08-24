@@ -7,25 +7,22 @@ This repository documents my work for the Data Bootcamp, organized into **six st
 ## 📂 Repo Structure
 
 
+## 📂 Repo Structure
 
-bootcamp_Rajvardhan_Pawar/
-│
-├── homework/ # Bootcamp assignments (Stage00–06)
-│ ├── stage00/ # Environment setup
-│ ├── stage01/ # Data exploration & setup
-│ ├── stage02/ # Configs & .env usage
-│ ├── stage03/ # API pulls & data collection
-│ ├── stage04/ # Web scraping
-│ ├── stage05/ # Data storage (CSV/Parquet)
-│ └── stage06/ # Data preprocessing (cleaning)
-│
-├── project/ # Personal project (parallel to homework stages)
-│
-├── src/ # Modular Python functions (e.g. cleaning, utils)
-│
-├── .env.example # Template for environment variables
-├── .gitignore # Ignored files/folders
-└── README.md # This file
+- **bootcamp_Rajvardhan_Pawar/**
+  - **homework/** – Bootcamp assignments (Stage00–06)
+    - stage00/ – Environment setup  
+    - stage01/ – Data exploration & setup  
+    - stage02/ – Configs & .env usage  
+    - stage03/ – API pulls & data collection  
+    - stage04/ – Web scraping  
+    - stage05/ – Data storage (CSV/Parquet)  
+    - stage06/ – Data preprocessing (cleaning)  
+  - **project/** – Personal project (parallel to homework stages)  
+  - **src/** – Modular Python functions (e.g., cleaning, utils)  
+  - **.env.example** – Template for environment variables  
+  - **.gitignore** – Ignored files/folders  
+  - **README.md** – This file  
 
 
 
